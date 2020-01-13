@@ -3,10 +3,11 @@ package ru.atom.geometry;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import static junit.framework.Assert.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;
 
-@Ignore
+
 public class PointPointCollisionTest {
     @Test
     public void pointSelfCollide() {
@@ -18,7 +19,7 @@ public class PointPointCollisionTest {
     public void pointsEquals() {
         Collider point1 = Geometry.createPoint(100, 100);
         Collider point2 = Geometry.createPoint(100, 100);
-        assertTrue(point1.equals(point2));
+        assertEquals(point1, point2);
     }
 
     @Test
